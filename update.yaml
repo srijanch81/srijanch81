@@ -1,0 +1,16 @@
+name: Update README Quote
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  update-quote:
+    name: Update README Quote
+    runs-on: ubuntu-latest
+    steps:
+      - uses: srijanch81/quote-readme@main
+        with:
+          COMMIT_MESSAGE: ":loud_sound: Update Quote"
+          OPTION: quote
